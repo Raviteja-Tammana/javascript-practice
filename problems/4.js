@@ -7,7 +7,9 @@
  * @example ["chase", "uci", "apple", "zebra"] -> ["zebra", "uci", "chase", "apple"]
 */
 function problem(words) {
-    return null;
+    let bans = words.sort();
+    let ans = words.reverse();
+    return ans;
 }
 
 const tests = [

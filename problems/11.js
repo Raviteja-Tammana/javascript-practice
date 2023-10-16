@@ -8,7 +8,10 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let rem = /[\W_]/g;
+    let change1 = str.toLowerCase().replace(rem, "");
+    let reverseStr = change1.split('').reverse().join('');
+    return reverseStr === change1;
 }
 
 const tests = [

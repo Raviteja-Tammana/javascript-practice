@@ -7,7 +7,23 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    let countMax = 0;
+    let ans;
+    for (let i = 0; i < numbers.length; i++) {
+        let count = 0;
+        for (let j = 0; j < numbers.length; j++) {
+            if (numbers[i] === numbers[j]) {
+                count++;
+            }
+        }
+
+        if (count > countMax) {
+            countMax = count;
+            ans = numbers[i]
+        }
+    }
+    return ans;
+
 }
 
 const tests = [
